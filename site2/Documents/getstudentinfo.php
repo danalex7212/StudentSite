@@ -1,4 +1,22 @@
+<html>
+<head>
+  <style>
+ul li{
+  text-align: center;
+  display: inline;
+  padding:10px;
+}
+  </style>
+</head>
+<body>
+
+  <ul  >
+  <li><a href="getstudentinfo.php">Get Student Info</a></li>
+  <li><a href="addstudent.php">Add Student</a></li>
+  <li><a href="deletestudent.php">Delete Student</a></li>
+  </ul>
 <?php
+
 require_once('../mysqli_connect.php');
 $query = " SELECT first_name, last_name, email, street, city, state,zip,phone,birth_date FROM students" ;
 
@@ -35,8 +53,10 @@ while($row= mysqli_fetch_array($response))
 }
 else
 {
-  echo "Couldnt issue databse query";
+  echo "Couldnt issue database query";
   echo mysqli_error($dbc);
 }
 mysqli_close($dbc);
  ?>
+</body>
+</html>

@@ -2,8 +2,19 @@
 
   <head>
     <title>Add Student </title>
+    <style>
+  ul li{
+    text-align: center;
+    display: inline;
+    padding:10px;
+  }
+    </style>
   </head>
   <body>
+    <ul>
+<li><a href="getstudentinfo.php">Get Student Info</a></li>
+<li><a href="addstudent.php">Add Student</a></li>
+    </ul>
     <form action="http://localhost:81/site2/Documents/studentadded.php" method="post">
       <b> Add a New Student </b>
       <p>First Name:
