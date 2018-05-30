@@ -2,18 +2,13 @@
 
   <head>
     <title>Add Student </title>
-    <style>
-  ul li{
-    text-align: center;
-    display: inline;
-    padding:10px;
-  }
-    </style>
+  <link rel="stylesheet" href="style.css" type="text/css" >
   </head>
   <body>
     <ul>
 <li><a href="getstudentinfo.php">Get Student Info</a></li>
 <li><a href="addstudent.php">Add Student</a></li>
+<li><a href="deletestudent.php">Delete Student</a></li>
     </ul>
       <?php
         if(isset($_POST['submit']))

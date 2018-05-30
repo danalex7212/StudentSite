@@ -2,19 +2,18 @@
 
   <head>
     <title>Add Student </title>
-    <style>
-  ul li{
-    text-align: center;
-    display: inline;
-    padding:10px;
-  }
-    </style>
+    <link rel="stylesheet" href="style.css" type="text/css" >
+  
   </head>
   <body>
+    <nav>
     <ul>
 <li><a href="getstudentinfo.php">Get Student Info</a></li>
 <li><a href="addstudent.php">Add Student</a></li>
+<li><a href="deletestudent.php">Delete Student</a></li>
     </ul>
+  </nav>
+  <div>
     <form action="http://localhost:81/site2/Documents/studentadded.php" method="post">
       <b> Add a New Student </b>
       <p>First Name:
@@ -56,6 +55,7 @@
 
 
     </form>
+  </div>
   </body>
 
 </html>

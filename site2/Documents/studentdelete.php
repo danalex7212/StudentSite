@@ -1,19 +1,14 @@
 <html>
 
   <head>
-    <title>Add Student </title>
-    <style>
-  ul li{
-    text-align: center;
-    display: inline;
-    padding:10px;
-  }
-    </style>
+      <title>DeleteStudent </title>
+    <link rel="stylesheet" href="style.css" type="text/css" >
   </head>
   <body>
     <ul>
 <li><a href="getstudentinfo.php">Get Student Info</a></li>
-<li><a href="addstudent.php">Add Student</a></li>response=@
+<li><a href="addstudent.php">Add Student</a></li>
+<li><a href="deletestudent.php">Delete Student</a></li>
     </ul>
       <?php
         if(isset($_POST['submit']))
@@ -24,13 +19,14 @@
           $query = " DELETE FROM students WHERE first_name=  '".$f_name."' ";
 
           $response=mysqli_query($dbc,$query);
-          if ($response)
+          $affected_rows = mysqli_affected_rows($dbc);
+          if ($response && $affected_rows==1)
           {
            echo "Student Deleted";
            mysqli_close($dbc);
          }
             else {
-              echo "error" . mysqli_error($dbc) ;
+              echo "No student has been deleted" . mysqli_error($dbc) ;
               mysqli_close($dbc);
             }
 
